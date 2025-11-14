@@ -16,10 +16,10 @@ export default function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
   return (
-    <div className="sticky top-0 z-30 bg-[#F6F8FB]/70 dark:bg-[#071026]/70 backdrop-blur">
+    <div className="sticky top-0 z-30 bg-[#F6F8FB]/70 dark:bg-[#000]/70 backdrop-blur">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <div className="text-lg font-semibold">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#7C3AED] to-[#06B6D4]">Nova School</span>
+          <span className="bg-clip-text text-transparent bg-white">Nova School</span>
         </div>
         <div className="flex items-center gap-2">
           <Button variant="ghost" className="rounded-full hover:-translate-y-0.5 transition">

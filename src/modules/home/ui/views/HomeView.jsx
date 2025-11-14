@@ -50,7 +50,13 @@ export default function HomeView() {
         <QuickCreateActions />
 
         {/* Main Grid */}
+          <div className="grid sm:grid-cols-2 gap-6">
+              {metrics.map((m, i) => (
+                <MetricCard key={i} title={m.title} value={m.value} delta={m.delta} data={m.data} />
+              ))}
+            </div>
         <div className="grid lg:grid-cols-3 gap-6">
+          
           <div className="lg:col-span-2 space-y-6">
             <div className="grid sm:grid-cols-3 gap-4">
               <AttendanceOverview />
@@ -71,11 +77,7 @@ export default function HomeView() {
             </div>
 
            
-            <div className="grid sm:grid-cols-2 gap-6">
-              {metrics.map((m, i) => (
-                <MetricCard key={i} title={m.title} value={m.value} delta={m.delta} data={m.data} />
-              ))}
-            </div>
+          
           </div>
 
           <InsightsPanel items={insights} />
